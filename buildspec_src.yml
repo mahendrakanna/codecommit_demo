@@ -12,10 +12,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean
+      - mvn install
   post_build:
     commands:
       - echo Build completed on `date`
-#artifacts:
- # files:
-  #  - target/b78am.war
+artifacts:
+  files:
+    - target/b78am.war
