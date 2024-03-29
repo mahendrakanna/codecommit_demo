@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+    # this will install the java and maven dependency software's
+      java: corretto11  
+  pre_build:
+    commands:
+      - echo demo code build 
+      #- mvn verify sonar:sonar
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn install 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/b78am.war
